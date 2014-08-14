@@ -1,0 +1,27 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: #c8d0cf;
+}
+
+.logo{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #41d025 !important;
+}
+
+.navbar{
+  background: #3b4648;
+  border: none;
+  border-radius:0
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  float:none;
+  margin-right: auto;
+}
+
+.panel{
+  border: #A4AAAB solid 1px;
+}
