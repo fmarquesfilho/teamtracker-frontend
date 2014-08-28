@@ -16,10 +16,10 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
   $http.get('http://107.170.231.15:3000/public/data/commits.json')
     .success(function(data) {
         $scope.notifications = data;
-        console.log(data);
+        console.log("received:"+ data);
     })
     .error(function(data) {
-        console.log('Error: ' + data);
+        console.log("Error: " + data);
     });
 
 });
