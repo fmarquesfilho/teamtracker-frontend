@@ -12,4 +12,14 @@ ttApp.controller('FeedCtrl', function ($scope) {
      'message': 'Add layers. SO MANY LAYERS',
      'date': '12/08/2014'},
   ];
+
+  $http.get('http://107.170.231.15:3000/public/data/commits.json')
+    .success(function(data) {
+        $scope.notifications = data;
+        console.log(data);
+    })
+    .error(function(data) {
+        console.log('Error: ' + data);
+    });
+
 });
