@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ttApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
 
 
   </head>
-  <body>
+  <body ng-controller="FeedCtrl">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -45,7 +45,7 @@
     </nav>
     <div class="container">
       <div class="row">
-        <div class= "col-md-7 center-block feed">
+        <div class= "col-md-7 center-block feed" ng-repeat= "notification in notifications">
           <!-- AQUI COMEÇA UMA NOTIFICAÇÃO -->
           <div class="panel panel-default">
             <div class= "panel-body notifcation-body">
@@ -54,11 +54,11 @@
               </div>
               <div class="col-md-6">
                 <p>
-                <strong>Add user model</strong>
+                <strong {{notification.message}} model</strong>
 
                 </p>
                 <p>
-                  jeffwinger authored 14 days ago
+                  {{notification.user}} authored on {{notification.date}}
                 <br>
                   3 files added, 2 changed
                 </p>
@@ -69,7 +69,7 @@
                   <strong>On branch</strong>
                 </p>
                 <p>
-                  master
+                  {{notification.branch}}
                 </p>
               </div>
 
