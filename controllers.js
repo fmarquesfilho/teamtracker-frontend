@@ -1,6 +1,6 @@
 var ttApp = angular.module('ttApp', []);
 
-ttApp.controller('FeedCtrl', function ($scope) {
+ttApp.controller('FeedCtrl', function ($scope, $http) {
   $scope.notifications = [
     {'author': 'Jeff Winger',
      'message': 'Nah, I\'ll do it later.',
