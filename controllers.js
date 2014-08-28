@@ -13,9 +13,11 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
      'date': '12/08/2014'},
   ];
 
-  $http.get('http://107.170.231.15:3000/public/data/commits.json')
+  $http.get({
+        method: 'GET', 
+        url: 'http://107.170.231.15:3000/public/data/commits.json'
+    })
     .success(function(data) {
-        $scope.notifications = data;
         console.log("received:"+ data);
     })
     .error(function(data) {
