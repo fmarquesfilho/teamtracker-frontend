@@ -36,17 +36,17 @@ strong{
 .panel{
   /*border: #A4AAAB solid 1px;*/
   border-radius: 0;
--webkit-box-shadow: 0px 3px 3px 0px #A4AAAB ;
--moz-box-shadow:    0px 3px 3px 0px #A4AAAB ;
-box-shadow:         0px 3px 3px 0px #A4AAAB ;
-
+  -webkit-box-shadow: 0px 3px 3px 0px #A4AAAB ;
+  -moz-box-shadow:    0px 3px 3px 0px #A4AAAB ;
+  box-shadow:         0px 3px 3px 0px #A4AAAB ;
 
 }
 
 .panel-body{
   background: #E9EDEC;
-  padding: .3em;
+  padding-left: 0em;
   padding-top: .8em;
+  padding-bottom: .2em;
 }
 
 .padding-bottom{
@@ -62,5 +62,6 @@ box-shadow:         0px 3px 3px 0px #A4AAAB ;
 }
 
 .user-notification-avatar{
-  vertical-align: top;
+  padding-top: .6em;
+  margin-left: 1.2em;
 }
