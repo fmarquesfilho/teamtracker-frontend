@@ -17,6 +17,7 @@
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
 
@@ -54,7 +55,7 @@
       <div class="row">
         <div class= "col-md-7 center-block feed" ng-repeat= "notification in notifications">
           <!-- AQUI COMEÇA UMA NOTIFICAÇÃO -->
-          <div class="panel panel-default">
+          <!-- <div class="panel panel-default">
             <div class= "panel-body notifcation-body">
               <div class="col-md-2">
                 <img src="http://placehold.it/75x75">
@@ -81,8 +82,30 @@
               </div>
 
             </div>
-          </div>
+          </div> -->
           <!-- AQUI TERMINA UMA NOTIFICAÇÃO -->
+
+          <div class="panel panel-default">
+            <div class= "panel-body notifcation-body">
+              <div class="col-md-12 padding-bottom">
+                On repository <a href="#">4Soft/banco-de-vagas</a>
+              </div>
+
+              <div class="col-md-1">
+                <!-- <img src="http://placehold.it/54x54"> -->
+                <i class="fa fa-exclamation-circle fa-3x"></i>
+              </div>
+              <div class="col-md-9">
+                <strong> <a href="#">#1</a> Adicionado Comentário </strong>
+                <p>
+                  Opened 14 days ago by <a href="#">BenGurgel</a>
+                </p>
+              </div>
+              <div class="col-md-1 user-notification-avatar">
+                <img src="http://placehold.it/54x54">
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>

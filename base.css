@@ -40,8 +40,27 @@ strong{
 -moz-box-shadow:    0px 3px 3px 0px #A4AAAB ;
 box-shadow:         0px 3px 3px 0px #A4AAAB ;
 
+
 }
 
 .panel-body{
   background: #E9EDEC;
+  padding: .3em;
+  padding-top: .8em;
+}
+
+.padding-bottom{
+  padding-bottom: .5em;
+}
+
+.padding-left{
+  padding-left: 2em
+}
+
+.fa{
+  color:#b8b9b8;
+}
+
+.user-notification-avatar{
+  vertical-align: top;
 }
