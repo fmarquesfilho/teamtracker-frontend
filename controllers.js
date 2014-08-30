@@ -1,17 +1,6 @@
 var ttApp = angular.module('ttApp', []);
 
 ttApp.controller('FeedCtrl', function ($scope, $http) {
-  $scope.notifications = [
-    {'author': 'Jeff Winger',
-     'message': 'Nah, I\'ll do it later.',
-     'date': '12/08/2014'},
-    {'author': 'Abed Nadir',
-     'message': 'Cool. Cool cool code.',
-     'date': '12/08/2014'},
-    {'author': 'Troy Barnes',
-     'message': 'Add layers. SO MANY LAYERS',
-     'date': '12/08/2014'},
-  ];
 
   $http({
         method: 'GET',
@@ -19,7 +8,8 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
     })
     .success(function(data) {
         console.log("received:"+ data);
-        $scope.notifications = data.commits['luizrogeriocn/webhook-tester'];
+        $scope.commits = data.notifications.commits;
+        $scope.issues = data.notifications.issues;
     })
     .error(function(data) {
         console.log("Error: " + data);
