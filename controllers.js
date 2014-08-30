@@ -13,12 +13,13 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
      'date': '12/08/2014'},
   ];
 
-  $http.get({
-        method: 'GET', 
-        url: 'http://107.170.231.15:3000/public/data/commits.json'
+  $http({
+        method: 'GET',
+        url: 'http://107.170.231.15/public/data/commits.json'
     })
     .success(function(data) {
         console.log("received:"+ data);
+        $scope.notifications = data.commits['luizrogeriocn/webhook-tester'];
     })
     .error(function(data) {
         console.log("Error: " + data);
