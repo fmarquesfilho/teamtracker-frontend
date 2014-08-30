@@ -7,7 +7,7 @@ gulp.task('default', function() {
  
 gulp.task('webserver', function() {
     connect.server({
-          livereload: true;
+          livereload: true
     });
 });
  
