@@ -1,0 +1,10 @@
+{
+  "name": "colabore-app",
+  "version": "0.0.0",
+  "description": "Measure Colaboration",
+  "main": "server.js",
+  "author": "luizrogeriocn",
+  "dependencies": {
+    "moment": "*"
+  }
+}

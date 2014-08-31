@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+  <div class= "panel-body notifcation-body">
+    <div class= "col-md-10">
+      <div class="col-md-12 padding-bottom">
+        On repository <a href="#">{{notification.repository}}</a>
+      </div>
+      <div class="col-md-1">
+        <!-- <img src="http://placehold.it/54x54"> -->
+        <i class="fa fa-exclamation-circle fa-3x"></i>
+      </div>
+      <div class="col-md-9 padding-left">
+        <strong>{{notification.title}}</strong>
+        <p>
+          Opened at {{notification.created_at}} by <a href="#">{{notification.author}}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-1 user-notification-avatar">
+      <img src="http://placehold.it/60x60">
+    </div>
+  </div>
+</div>

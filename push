@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class= "panel-body notifcation-body">
+    <div class= "col-md-10">
+      <div class="col-md-12 padding-bottom">
+        On repository <a href="#">{{notification.repository}}</a>
+      </div>
+      <div class="col-md-1">
+        <i class="fa fa-mail-forward fa-3x"></i>
+      </div>
+      <div class="col-md-9 padding-left">
+        <strong> {{notification.commits[0].message}} <a href="#">#13</a></strong>
+        <p>
+          at {{notification.commits[0].timestamp}} by <a href="#">{{notification.commits[0].author}}</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-1 user-notification-avatar">
+      <img src="http://placehold.it/60x60">
+    </div>
+  </div>
+</div>
