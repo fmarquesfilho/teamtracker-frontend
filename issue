@@ -11,7 +11,7 @@
       <div class="col-md-9 padding-left">
         <strong>{{notification.title}}</strong>
         <p>
-          Opened at {{notification.created_at}} by <a href="#">{{notification.author}}</a>
+          {{notification.action}} at {{notification.created_at}} by <a href="#">{{notification.author}}</a>
         </p>
       </div>
     </div>
