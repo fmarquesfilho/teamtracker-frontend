@@ -8,7 +8,7 @@ ttApp.controller('FeedCtrl', function ($scope, $http, $interval) {
     function refresh() {
       $http({
           method: 'GET',
-          url: 'http://potato-machine-111353.sae1.nitrousbox.com/public/data/commits.json'
+          url: 'http://tt.diredevs.com/public/data/commits.json'
       })
       .success(function(data) {
           $scope.notifications = data.notifications;
