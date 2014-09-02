@@ -8,7 +8,7 @@ ttApp.controller('FeedCtrl', function ($scope, $http, $interval) {
     function refresh() {
       $http({
           method: 'GET',
-          url: 'http://tt.diredevs.com/public/data/commits.json'
+          url: 'http://potato-machine-111353.sae1.nitrousbox.com/public/data/commits.json'
       })
       .success(function(data) {
           $scope.notifications = data.notifications;
@@ -20,8 +20,8 @@ ttApp.controller('FeedCtrl', function ($scope, $http, $interval) {
           }
 
           $scope.notifications.sort(function(a, b){
-              var date1 = (a.created_at || a.commits[0].timestamp), 
-                  date2 = (b.created_at || b.commits[0].timestamp);
+              var date1 = (a.created_at || a.event_time), 
+                  date2 = (b.created_at || b.event_time);
 
               if (date1 > date2) 
                   return -1;
