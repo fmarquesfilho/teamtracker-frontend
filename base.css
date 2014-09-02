@@ -65,3 +65,12 @@ strong{
   padding-top: .6em;
   margin-left: 1.2em;
 }
+
+.border-solid{
+  border-top: 2px solid #c8d0cf;
+  padding-top: 1em;
+}
+
+.commit-sub-card{
+  margin-top:90px
+}
