@@ -74,3 +74,13 @@ strong{
 .commit-sub-card{
   margin-top:90px
 }
+
+.small{
+  a{
+    font-size: 5px !important
+  }
+
+}
+.accordion-toggle {cursor: pointer;}
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}

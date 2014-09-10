@@ -27,7 +27,14 @@
     -->
 
     <!-- Page styles -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/base.css">
   </head>
@@ -109,8 +116,9 @@
           </div>
 
           <!-- PUSH -->
-          <div class="panel panel-default">
+          <div class="panel panel-default" id="accordion">
             <div class= "panel-body notifcation-body">
+
               <div class= "col-md-10">
                 <div class="col-md-12 padding-bottom">
                   On repository <a href="#">4Soft/gepe</a>
@@ -119,7 +127,7 @@
                   <!-- <img src="http://placehold.it/54x54"> -->
                   <i class="fa fa-clipboard fa-3x"></i>
                 </div>
-                <div class="col-md-9 padding-left">
+                <div class="col-md-8 padding-left">
                   <strong> 6 commits <a href="#">#1</a>, <a href="#">#2</a>, <a href="#">#12</a></strong>
                   <p>
                     7 days ago by <a href="#">SteveBuscemi</a>
@@ -131,8 +139,16 @@
                 <img src="http://placehold.it/60x60">
               </div>
 
-              <div class="commit-sub-card">
 
+              <div class="accordion-toggle">
+                <a>
+                  VER MAIS
+                </a>
+              </div>
+
+
+
+              <div class="collapse commit-sub-card accordion-content default">
               <!-- EACH COMMIT -->
 
                 <div class= "col-md-10  col-md-offset-1 border-solid padding-bottom">
@@ -194,7 +210,6 @@
 
         </div>
       </div>
-    </div>
 
 
     <!-- build:js scripts/main.min.js -->
@@ -213,6 +228,21 @@
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-XXXXX-X', 'auto');
       ga('send', 'pageview');
+    </script>
+
+    <!-- JS -->
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('#accordion').find('.accordion-toggle').click(function(){
+
+          //Expand or collapse this panel
+          $(this).next().slideToggle('fast');
+
+          //Hide the other panels
+          $(".accordion-content").not($(this).next()).slideUp('fast');
+
+        });
+      });
     </script>
     <!-- Built with love using Web Starter Kit -->
   </body>
