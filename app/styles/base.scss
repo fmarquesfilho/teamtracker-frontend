@@ -47,7 +47,7 @@ strong{
   background: #E9EDEC;
   padding-left: 0em;
   padding-top: .8em;
-  padding-bottom: .1em;
+  // padding-bottom: .1em;
 }
 
 .padding-bottom{
@@ -89,6 +89,10 @@ strong{
 .info-button{
   text-align: center;
   // font-size: 20px
+}
+
+.title-row{
+  margin-bottom: .7em;
 }
 .accordion-toggle {cursor: pointer;}
 .accordion-content {display: none;}
