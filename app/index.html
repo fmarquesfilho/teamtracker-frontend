@@ -57,160 +57,93 @@
       </div><!-- /.container-fluid -->
     </nav>
     <div class="container">
-      <div class="row">
-        <div class= "col-md-7 center-block feed" ng-repeat= "notification in notifications">
-          <!-- AQUI COMEÇA UMA NOTIFICAÇÃO -->
-          <!-- <div class="panel panel-default">
-            <div class= "panel-body notifcation-body">
-              <div class="col-md-2">
-                <img src="http://placehold.it/75x75">
-              </div>
-              <div class="col-md-6">
-                <p>
-                  <strong> {{notification.message}}</strong>
+      <div class= "feed col-md-6 col-small-12 center-block">
+        <!-- <div class= "col-md-7 center-block feed" ng-repeat= "notification in notifications"> -->
 
-                </p>
-                <p>
-                  {{notification.author}} authored on {{notification.date}}
-                <br>
-                  3 files added, 2 changed
-                </p>
-              </div>
 
-              <div class= "col-md-4">
-                <p>
-                  <strong>On branch</strong>
-                </p>
-                <p>
-                  {{notification.branch}}
-                </p>
-              </div>
+        <div class="row"> <!--PUSH PANEL ROW -->
 
-            </div>
-          </div> -->
-          <!-- AQUI TERMINA UMA NOTIFICAÇÃO -->
-
-          <!-- ISSUE -->
           <div class="panel panel-default">
-            <div class= "panel-body notifcation-body">
-              <div class= "col-md-10">
-                <div class="col-md-12 padding-bottom">
-                  On repository <a href="#">4Soft/banco-de-vagas</a>
-                </div>
-                <div class="col-md-1">
-                  <!-- <img src="http://placehold.it/54x54"> -->
-                  <i class="fa fa-exclamation-circle fa-3x"></i>
-                </div>
-                <div class="col-md-9 padding-left">
-                  <strong> <a href="#">#1</a> Adicionado Comentário </strong>
-                  <p>
-                    Opened 14 days ago by <a href="#">BenGurgel</a>
-                  </p>
-                </div>
-              </div>
 
-              <div class="col-md-1 user-notification-avatar">
-                <img src="http://placehold.it/60x60">
-              </div>
-            </div>
-          </div>
+            <div class= "panel-body notifcation-body" >
 
-          <!-- PUSH -->
-          <div class="panel panel-default" id="accordion">
-            <div class= "panel-body notifcation-body">
-
-              <div class= "col-md-10">
-                <div class="col-md-12 padding-bottom">
-                  On repository <a href="#">4Soft/gepe</a>
-                </div>
-                <div class="col-md-1">
-                  <!-- <img src="http://placehold.it/54x54"> -->
-                  <i class="fa fa-clipboard fa-3x"></i>
-                </div>
-                <div class="col-md-8 padding-left">
-                  <strong> 6 commits <a href="#">#1</a>, <a href="#">#2</a>, <a href="#">#12</a></strong>
-                  <p>
-                    7 days ago by <a href="#">SteveBuscemi</a>
-                  </p>
-                </div>
-              </div>
-
-              <div class="col-md-1 user-notification-avatar">
-                <img src="http://placehold.it/60x60">
-              </div>
-
-
-              <div class="accordion-toggle">
-                <a>
-                  VER MAIS
-                </a>
-              </div>
-
-
-
-              <div class="collapse commit-sub-card accordion-content default">
-              <!-- EACH COMMIT -->
-
-                <div class= "col-md-10  col-md-offset-1 border-solid padding-bottom">
-                  <div class="col-md-1">
-                    <!-- <img src="http://placehold.it/54x54"> -->
-                    <i class="fa fa-mail-forward fa-3x"></i>
+              <div class="container" id="accordion">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding-bottom"> <!--TITLE PANEL ROW -->
+                    On repository <a href="#">4Soft/gepe</a>
                   </div>
-                  <div class="col-md-9 padding-left">
-                    <strong> Add user avatar <a href="#">#13</a></strong>
+                </div> <!--END OF FIRST ROW -->
+
+                <div class="row">
+
+                  <div class="col-md-1 col-sm-2 col-xs-2 ">
+                    <i class="fa fa-clipboard fa-3x"></i>
+                  </div>
+
+                  <div class="col-md-4 col-sm-8 col-xs-10">
+                    <strong> 6 commits <a href="#">#1</a>, <a href="#">#2</a>, <a href="#">#12</a></strong>
                     <p>
-                      7 days ago by <a href="#">SteveBuscemi</a>
+                      7 days ago by <a href="#">RobertRedford</a>
                     </p>
                   </div>
-                </div>
 
-                <div class= "col-md-10  col-md-offset-1 border-solid padding-bottom">
-                  <div class="col-md-1">
-                    <!-- <img src="http://placehold.it/54x54"> -->
-                    <i class="fa fa-mail-forward fa-3x"></i>
+                  <div class="col-md-1 col-sm-2 hidden-xs">
+                    <img src="http://placehold.it/45x45" class="user-avatar-small">
                   </div>
-                  <div class="col-md-9 padding-left">
-                    <strong> Add user gravatar <a href="#">#13</a></strong>
-                    <p>
-                      7 days ago by <a href="#">SteveBuscemi</a>
-                    </p>
+
+                </div> <!--END OF SECOND ROW -->
+
+                <div class="row"> <!--BUTTON ROW -->
+                  <div class="col-md-6 col-sm-12 col-xs-12 padding-bottom">
+                    <div class="info-button accordion-toggle">
+                      <i class="fa fa-chevron-down fa-lg"></i>
+                    </div>
                   </div>
-                </div>
+                </div> <!--END OF THIRD ROW -->
 
-              <!-- / EACH COMMIT -->
-              </div>
+                <div class="accordion-content default"> <!--ACCORDION -->
 
-            </div>
-          </div>
+                  <div class="row"> <!--FIRST ACCORDION NOTIFICATION -->
 
-          <!-- COMMIT -->
-          <div class="panel panel-default">
-            <div class= "panel-body notifcation-body">
-              <div class= "col-md-10">
-                <div class="col-md-12 padding-bottom">
-                  On repository <a href="#">4Soft/gepe</a>
-                </div>
-                <div class="col-md-1">
-                  <!-- <img src="http://placehold.it/54x54"> -->
-                  <i class="fa fa-mail-forward fa-3x"></i>
-                </div>
-                <div class="col-md-9 padding-left">
-                  <strong> Add user avatar <a href="#">#13</a></strong>
-                  <p>
-                    7 days ago by <a href="#">RobertRedford</a>
-                  </p>
-                </div>
-              </div>
+                    <div class="col-md-1 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-offset-2 col-xs-2 ">
+                      <i class="fa fa fa-mail-forward  fa-3x"></i>
+                    </div>
 
-              <div class="col-md-1 user-notification-avatar">
-                <img src="http://placehold.it/60x60">
-              </div>
-            </div>
-          </div>
+                    <div class="col-md-4 col-sm-7 col-xs-8">
+                      <strong> Add user avatar by image upload<a href="#">#13</a></strong>
+                      <p>
+                        7 days ago by <a href="#">RobertRedford</a>
+                      </p>
+                    </div>
 
-        </div>
-      </div>
+                  </div> <!--END OF FIRST ACCORDION NOTIFICATION -->
 
+                  <div class="row">  <!--SECOND ACCORDION NOTIFICATION -->
+
+                    <div class="col-md-1 col-md-offset-1 col-sm-2 col-sm-offset-1 col-xs-offset-2 col-xs-2 ">
+                      <i class="fa fa fa-mail-forward  fa-3x"></i>
+                    </div>
+
+                    <div class="col-md-4 col-sm-7 col-xs-8">
+                      <strong> Add user avatar by gravatar <a href="#">#13</a></strong>
+                      <p>
+                        6 days ago by <a href="#">RobertRedford</a>
+                      </p>
+                    </div>
+
+                  </div> <!--END OF SECOND ACCORDION NOTIFICATION -->
+
+                </div> <!--END OF ACCORDION CONTENT -->
+
+              </div> <!--END OF INNER CONTAINER -->
+            </div> <!--END OF PANEL BODY -->
+          </div> <!--END OF PANEL -->
+        </div> <!--END OF PUSH PANEL ROW -->
+
+
+
+      </div> <!--END OF FEED -->
+    </div><!--END OF FEED CONTAINER-->
 
     <!-- build:js scripts/main.min.js -->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -242,6 +175,8 @@
           $(".accordion-content").not($(this).next()).slideUp('fast');
 
         });
+
+
       });
     </script>
     <!-- Built with love using Web Starter Kit -->
