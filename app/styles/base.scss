@@ -1,9 +1,15 @@
+$lightGray: #E9EDEC;
+$darkGray: #3b4648;
+$gray: #c8d0cf;
+
+$lightGreen: #41d025;
+
 body{
   /*font-family: 'Open Sans', sans-serif;*/
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
-  background: #c8d0cf;
-  color: #3b4648;
+  background: $gray;
+  color: $darkGray;
   letter-spacing: .5px;
 }
 
@@ -15,11 +21,11 @@ strong{
 .logo{
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
-  color: #41d025 !important;
+  color: $lightGreen !important;
 }
 
 .navbar{
-  background: #3b4648;
+  background: $darkGray;
   border: none;
   border-radius:0;
   -webkit-box-shadow: 0px 2px 2px 0px #A4AAAB ;
@@ -45,7 +51,7 @@ strong{
 }
 
 .panel-body{
-  background: #E9EDEC;
+  background: $lightGray;
   padding-left: 0em;
   padding-top: .8em;
   // padding-bottom: .1em;
@@ -69,7 +75,7 @@ strong{
 }
 
 .border-solid{
-  border-top: 2px solid #c8d0cf;
+  border-top: 2px solid $gray;
   padding-top: 1em;
 }
 
@@ -84,6 +90,7 @@ strong{
 }
 .user-avatar-small{
   border-radius:100px;
+  border: 2px solid #969797;
   // margin-bottom: 1em;
 }
 
