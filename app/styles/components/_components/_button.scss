@@ -4,53 +4,21 @@
 *
 **/
 
-.button {
+@mixin button($color) {
   display: inline-block;
-  padding: (($lineHeight / 2) - 1) 32px;
-  margin-bottom: $lineHeight / 2;
-  margin-top: $lineHeight / 2;
-  min-height: $lineHeight;
-
-  text-align: center;
-
-  font-family: $fontHighlight;
-  font-weight: 600;
-  text-decoration: none;
-
-  outline: 0;
-
-  transition: none;
-
-  &:hover {
-    background: #4d4d4d;
-    color: #ffffff;
-    border: 1px solid #4d4d4d;
-    text-decoration: none;
-  }
-}
-
-// Mixin to create buttons
-@mixin style-button($color, $textColor, $isInverted: false) {
-
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  border-radius: $borderRadius;
   background: $color;
-  color: $textColor;
-  border: 1px solid darken($color, 10%);
-
-  @if $isInverted { border-color: transparent;}
+  color: #fff;
+  font-size: $fontSmall;
+  margin-top: $lineHeight;
 }
-
 
 .button--primary {
-  @extend .button;
-  @include style-button(#4285f4, #ffffff);
+  @include button($colorBlue);
 }
 
 .button--secondary {
-  @extend .button;
-  @include style-button(#ffffff, $colorBlue);
-}
-
-.button--secondary-variation {
-  @extend .button;
-  @include style-button(#ffffff, $colorBlue, true);
+  @include button($colorGrayLight);
 }
