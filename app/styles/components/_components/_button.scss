@@ -13,6 +13,9 @@
   color: #fff;
   font-size: $fontSmall;
   margin-top: $lineHeight;
+  &:hover {
+    background: lighten($color, 10%);
+  }
 }
 
 .button--primary {

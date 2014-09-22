@@ -38,8 +38,8 @@
 @import '_components/_panel';
 @import '_components/_typography';
 @import '_components/_button';
-/*@import '_components/_list';
-@import '_components/_link';
+@import '_components/_list';
+/*@import '_components/_link';
 @import '_components/_table';
 @import '_components/_media';
 @import '_components/_breadcrumb';
@@ -55,4 +55,5 @@
 @import '_pages/_styleguide';
 @import '_pages/_page-resources';
 // Make sure this is last to override anything else :)
-/* @import '_helper'; */
+*/
+@import '_helper';
