@@ -6,16 +6,18 @@
 
 a {
   color: $colorBlue;
+  text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
+  color: lighten($colorBlue, 10%);
 }
 
-.cta--primary {
-  @include style-cta($colorBlue, $icon-chevron-right);
-}
-
-.cta--secondary {
-  @include style-cta($colorBlue);
+a.subtle-link {
+  color: $colorGray;
+  text-decoration: none;
+  &:hover {
+    color: $colorGrayDark;
+  }
 }
