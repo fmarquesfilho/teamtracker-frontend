@@ -21,6 +21,10 @@ small {
   @include type--small;
 }
 
+strong {
+  color: $colorGrayDark;
+}
+
 .base,
 p,
 ul,

@@ -19,5 +19,14 @@
     &:last-child {
       border: 0;
     }
+    // Apply Clearfix
+    &::before,
+    &::after {
+      content: '';
+      display: table;
+    }
+    &::after {
+      clear: both;
+    }
   }
 }
