@@ -26,6 +26,7 @@
   $colorBlueSecondary : lighten($colorBlue, 30%) !default;
   $colorRed           : #dc4d38 !default;
   $colorRedSecondary  : lighten($colorRed, 30%) !default;
+  $colorRedDark       : darken($colorRed, 10%) !default;
 
   $colorGrayBackground : #f7f6f9 !default;
   $colorGray           : #7c7c80 !default;

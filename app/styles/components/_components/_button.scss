@@ -6,7 +6,7 @@
 
 @mixin button($color) {
   display: inline-block;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2em 0.5em;
   cursor: pointer;
   border-radius: $borderRadius;
   background: $color;
@@ -21,6 +21,19 @@
 
 .button, .button--primary {
   @include button($colorBlue);
+}
+
+.button--golden {
+  background: nth($paletteYellow, 10);
+  background: $colorRed;
+}
+
+.button--medium {
+  font-size: $fontMedium;
+}
+
+.button--red-dark {
+  background: $colorRedDark;
 }
 
 .button--secondary {

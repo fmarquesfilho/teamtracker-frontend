@@ -9,3 +9,18 @@
   background: #eef1f2;
   @extend .clear;
 }
+
+.sign-up {
+  padding: $lineHeight 0 2*$lineHeight;
+  background: $colorRed;
+  color: #fff;
+  text-align: center;
+  h3,a { color: #fff; }
+  a {
+    opacity: 0.8;
+    border-bottom: 2px solid #fff;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
