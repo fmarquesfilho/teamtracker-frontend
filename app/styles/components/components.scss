@@ -16,6 +16,7 @@
 
 // Modules
 @import '_modules/_topbar';
+@import '_modules/_footer';
 /* @import '_modules/_highlight';
 @import '_modules/_editorial-header';
 @import '_modules/_summary-header';
@@ -49,11 +50,15 @@
 @import '_components/_articles-list';
 @import '_components/_guides-list';
 @import '_components/_icon-circle';
+*/
 
 // Themed styles
-@import '_themed';
+/*@import '_themed';
 
 // Pages
+*/
+@import '_pages/_home';
+/*
 @import '_pages/_styleguide';
 @import '_pages/_page-resources';
 // Make sure this is last to override anything else :)

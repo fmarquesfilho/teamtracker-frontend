@@ -6,5 +6,5 @@
 
 .topbar {
   @include rule--base;
-  margin-bottom: $lineHeight;
+  padding-bottom: $lineHeight;
 }
