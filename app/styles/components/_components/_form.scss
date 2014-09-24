@@ -1,0 +1,34 @@
+/* *
+*
+* Inputs
+*
+* */
+
+.form {
+  margin-top: $lineHeight;
+}
+
+.input {
+  border-radius: $borderRadius;
+  border: 1px solid $colorGrayLight;
+  padding: 0.2em 0.8em;
+}
+
+.input--block {
+  display: block;
+  width: 100%;
+}
+
+.field {
+  display: block;
+  overflow: hidden;
+}
+
+.label {
+  float: left;
+  padding-right: 1em;
+}
+
+.input--full-width {
+  width: 100%;
+}

@@ -15,13 +15,19 @@
   margin-top: $lineHeight;
   &:hover {
     background: lighten($color, 10%);
+    color: #fff;
   }
 }
 
-.button--primary {
+.button, .button--primary {
   @include button($colorBlue);
 }
 
 .button--secondary {
   @include button($colorGrayLight);
+}
+
+.button--block {
+  width: 100%;
+  text-align: center;
 }
