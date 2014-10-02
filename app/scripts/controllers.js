@@ -1,4 +1,4 @@
-var ttApp = angular.module('ttApp', []);
+var ttApp = angular.module('ttApp', ['angularMoment']);
 
 ttApp.controller('FeedCtrl', function ($scope, $http) {
   
