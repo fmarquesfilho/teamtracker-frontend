@@ -1,0 +1,13 @@
+<ul class="panel--group">
+  <li class="clear">
+    <h5>Issue {{notification.object.action}} at <a href="http://github.com/{{notification.repo}}">{{notification.repo}}</a></h5>
+    <br>
+    <div class="avatar pull-left" style="background-image: url('{{notification.object.sender.avatar_url}}')"></div>
+    <span class="mega-octicon octicon-issue-opened pull-right" ng-class="hidden"></span>
+    <p class= "feed-description">
+      <strong>{{notification.object.issue.title}}</strong>
+      <br>
+      <span am-time-ago="notification.event_time"></span> by <a href="http://github.com/{{notification.actor}}">{{notification.actor}}</a>
+    </p>
+  </li>
+</ul>

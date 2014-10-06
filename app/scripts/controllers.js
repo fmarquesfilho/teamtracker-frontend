@@ -19,8 +19,10 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
         return 'cards/single_push.html';
       else return 'cards/mult_push.html';
     }
-    else
-      return "cards/todo.html";
+    else if (notification.event_name == "issues") {
+      return "cards/issue_" + notification.object.action + ".html";
+    }
+    else return "cards/todo.html";
   };
 })
 .directive('card', function($parse) {
