@@ -1,0 +1,23 @@
+/**
+*
+* Link
+*
+**/
+
+a {
+  color: $colorBlue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: lighten($colorBlue, 10%);
+}
+
+a.subtle-link {
+  color: $colorGray;
+  text-decoration: none;
+  &:hover {
+    color: $colorGrayDark;
+  }
+}

@@ -1,0 +1,46 @@
+/**
+*
+* Button
+*
+**/
+
+@mixin button($color) {
+  display: inline-block;
+  padding: 0.2em 0.5em;
+  cursor: pointer;
+  border-radius: $borderRadius;
+  background: $color;
+  color: #fff;
+  font-size: $fontSmall;
+  margin-top: $lineHeight;
+  &:hover {
+    background: lighten($color, 10%);
+    color: #fff;
+  }
+}
+
+.button, .button--primary {
+  @include button($colorBlue);
+}
+
+.button--golden {
+  background: nth($paletteYellow, 10);
+  background: $colorRed;
+}
+
+.button--medium {
+  font-size: $fontMedium;
+}
+
+.button--red-dark {
+  background: $colorRedDark;
+}
+
+.button--secondary {
+  @include button($colorGrayLight);
+}
+
+.button--block {
+  width: 100%;
+  text-align: center;
+}
