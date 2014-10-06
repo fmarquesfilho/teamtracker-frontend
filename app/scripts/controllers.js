@@ -2,7 +2,7 @@ var ttApp = angular.module('ttApp', ['angularMoment']);
 
 ttApp.controller('FeedCtrl', function ($scope, $http) {
   
-  $http.get('http://tt.diredevs.com/feed/1')
+  $http.get('http://potato-machine-111353.sae1.nitrousbox.com:3100/feed/1')
   .success(function(data) {
     $scope.notifications = data;
   })
