@@ -38,7 +38,7 @@
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="styles/main.css">
   </head>
-  <body ng-controller="FeedCtrl">
+  <body ng-controller="SessionCtrl">
 
     <header class="topbar">
       <div class="container">
@@ -66,7 +66,7 @@
           <div class="g-wide--3 g--last">
             <h4>Authorize your GitHub Account</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam facilis incidunt iste sit porro sequi quis non optio? Quam illum corporis totam omnis perspiciatis? Nesciunt eius similique velit deserunt?</p>
-            <a href="#" class="button button--primary"><span class="octicon octicon-mark-github"></span> AUTHORIZE GITHUB ACCOUNT</a>
+            <a ng-href="{{login_url}}" class="button button--primary"><span class="octicon octicon-mark-github"></span> AUTHORIZE GITHUB ACCOUNT</a>
           </div>
         </div>
       </div>
@@ -104,6 +104,10 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-moment/0.8.2/angular-moment.min.js"></script> 
+      
     <script src="scripts/main.js"></script>
     <script src="scripts/controllers.js"></script>
     <!-- endbuild -->

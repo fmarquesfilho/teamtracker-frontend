@@ -24,14 +24,16 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
     }
     else return "cards/todo.html";
   };
-})
-.directive('card', function($parse) {
-  return {
-    restrict: 'A',
-    link: function ($scope, element, $attr) {
-      var data = JSON.parse($attr.data);
-      
-      element.html(data.event_action);
-    }
-  };
+});
+
+ttApp.controller('SessionCtrl', function ($scope, $http) {
+  
+  $http.get('http://tt.diredevs.com/login_url')
+  .success(function(data) {
+    $scope.login_url = data.url;
+  })
+  .error(function(data) {
+    console.log('Error: ' + data);
+  });
+
 });
