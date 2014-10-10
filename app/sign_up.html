@@ -59,23 +59,39 @@
     <div class="container">
       <div class="g-wide--3 g--centered">
         <div class="panel clearfix">
-          <h3>TEAMTRACKER</h3>
+          <h3>FIRST STEP</h3>
           <div class="g-wide--1">
-            <h4>[OCTOCAT]</h4>
+            <h4>[OCTOCAT LOGO]</h4>
           </div>
           <div class="g-wide--3 g--last">
             <h4>Authorize your GitHub Account</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aperiam facilis incidunt iste sit porro sequi quis non optio? Quam illum corporis totam omnis perspiciatis? Nesciunt eius similique velit deserunt?</p>
+            <p>Don't worry, we won't bite ;) </p>
             <a ng-href="{{login_url}}" class="button button--primary"><span class="octicon octicon-mark-github"></span> AUTHORIZE GITHUB ACCOUNT</a>
           </div>
         </div>
       </div>
       <div class="g-wide--3 g--centered">
         <div class="panel clearfix">
-          <h3>TEAMTRACKER</h3>
+          <h3>SECOND STEP</h3>
+          <div class="g--half">
+            <h4>Choose the organizations you wish to track.</h4>
+            <p>You'll be be able to track it and give it some awesomeness!</p>
+          </div>
+          <div class="g--half g--last">
+            <ul class="repo-list">
+              <li>TEAM 1</li>
+              <li>TEAM 2</li>
+              <li>TEAM 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="g-wide--3 g--centered">
+        <div class="panel clearfix">
+          <h3>THIRD STEP</h3>
           <div class="g--half">
             <h4>Choose the repositories you wish to track.</h4>
-            <p>Corporis voluptas facere incidunt adipisci tenetur, repellat, animi harum quibusdam.</p>
+            <p>Choose the repos you'd like to get some information. Relax, you'll be able to add more later.</p>
           </div>
           <div class="g--half g--last">
             <ul class="repo-list">
@@ -88,16 +104,43 @@
       </div>
       <div class="g-wide--3 g--centered">
         <div class="panel clearfix">
-          <h3>TEAMTRACKER</h3>
-          <div class="g--half">
-            <h4>Configure your slack account.</h4>
-            <p>Corporis voluptas facere incidunt adipisci tenetur, repellat, animi harum quibusdam.</p>
+          <h3>FOURTH STEP</h3>
+          <div class="g-wide--1">
+            <h4>[SLACK LOGO]</h4>
           </div>
-          <div class="g--half g--last">
-            [...]
+          <div class="g-wide--3 g--last">
+            <h4>Configure your Slack account.</h4>
+            <p>We plan to contact the Slack staff soon so we can add this integration with just one click. For now, you'll need to do some work manually ¯\_(ツ)_/¯ </p>
+          </div>
+          <div class="g-wide--4 g--last">
+            <p>
+              On your slack home, click on your team name, then select Configure Integrations:
+            </p>
+            <h4>[SLACK STEP 1 IMAGE]</h4>
+            <p>
+              At the Add Integration page, select "Outgoing Webhooks":
+            </p>
+            <h4>[SLACK STEP 2 IMAGE]</h4>
+            <p>
+              Set the Integration Settings like the screen below (trigger word: 'tt', URL: 'http://colabore.herokuapp.com/api/webhooks/slack'):
+            </p>
+            <h4>[SLACK STEP 3 IMAGE]</h4>
+            <p>
+              The other fields are optional and you can fill as you want!
+            </p>
+            <p>
+              Click 'Save Integrations' then.. Done!
+            </p>
+          </div>
+        </div>
+        <div class="cotainer">
+          <div class="g--half g--centered">
+            <a href="#" class="button--primary button--block">FINISH SETUP! TAKE ME TO TEAM TRACKER!</a>
           </div>
         </div>
       </div>
+
+
     </div>
 
     <!-- build:js scripts/main.min.js -->
