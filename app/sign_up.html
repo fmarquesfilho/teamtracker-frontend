@@ -56,7 +56,15 @@
       </div>
     </header>
 
+    <div class="container avatar" style="display: none">
+      <div class="g-wide--3 g--centered">
+        <p><img ng-src="{{profile.user.avatar_url}}" width="64" height="64" style="float: left"/>
+          {{profile.user.name}}</p>
+      </div>
+    </div>
+    
     <div class="container">
+
       <div class="g-wide--3 g--centered">
         <div class="panel clearfix">
           <h3>FIRST STEP</h3>
@@ -79,9 +87,9 @@
           </div>
           <div class="g--half g--last">
             <ul class="repo-list">
-              <li>TEAM 1</li>
-              <li>TEAM 2</li>
-              <li>TEAM 3</li>
+              <li ng-repeat="org in profile.user.orgs">{{org.login}}
+                <a href ng-click="track(org.login)">Track</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -95,9 +103,9 @@
           </div>
           <div class="g--half g--last">
             <ul class="repo-list">
-              <li>REPO 1</li>
-              <li>REPO 2</li>
-              <li>REPO 3</li>
+              <li ng-repeat="repo in repos">
+                {{repo.full_name}}
+              </li>
             </ul>
           </div>
         </div>

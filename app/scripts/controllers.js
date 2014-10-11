@@ -39,9 +39,18 @@ ttApp.controller('SessionCtrl', function ($scope, $http) {
   $http.get('http://potato-machine-111353.sae1.nitrousbox.com:8080/protected/profile', { withCredentials: true })
   .success(function(data) {
     $scope.profile = data;
+    console.log(data);
   })
   .error(function(data) {
     console.log('Error: ' + data);
   });
 
+  $scope.track = function(org) {
+   
+    for (var i = 0; i < $scope.profile.user.orgs.length; i++) {
+      if ($scope.profile.user.orgs[i].login == org) {
+        $scope.repos = $scope.profile.user.orgs[i].repos;
+      }
+    }
+  };
 });
