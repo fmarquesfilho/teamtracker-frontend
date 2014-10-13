@@ -2,7 +2,7 @@ var ttApp = angular.module('ttApp', ['angularMoment']);
 
 ttApp.controller('FeedCtrl', function ($scope, $http) {
   
-  $http.get('http://potato-machine-111353.sae1.nitrousbox.com:8080/feed/1')
+  $http.get('http://tt.diredevs.com/feed/1')
   .success(function(data) {
     $scope.notifications = data;
   })
@@ -28,7 +28,7 @@ ttApp.controller('FeedCtrl', function ($scope, $http) {
 
 ttApp.controller('SessionCtrl', function ($scope, $http) {
     
-  $http.get('http://potato-machine-111353.sae1.nitrousbox.com:8080/login_url')
+  $http.get('http://tt.diredevs.com/login_url')
   .success(function(data) {
     $scope.login_url = data.url;
   })
@@ -36,7 +36,7 @@ ttApp.controller('SessionCtrl', function ($scope, $http) {
     console.log('Error: ' + data);
   });
   
-  $http.get('http://potato-machine-111353.sae1.nitrousbox.com:8080/protected/profile', { withCredentials: true })
+  $http.get('http://tt.diredevs.com/protected/profile', { withCredentials: true })
   .success(function(data) {
     $scope.profile = data;
     console.log(data);
