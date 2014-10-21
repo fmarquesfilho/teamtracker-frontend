@@ -82,15 +82,13 @@
         <div class="panel clearfix">
           <h3>SECOND STEP</h3>
           <div class="g--half">
-            <h4>Choose the organizations you wish to track.</h4>
+            <h4>Choose the organization you wish to track.</h4>
             <p>You'll be be able to track it and give it some awesomeness!</p>
           </div>
           <div class="g--half g--last">
-            <ul class="repo-list">
-              <li ng-repeat="org in profile.user.orgs">{{org.login}}
-                <a href ng-click="track(org.login)">Track</a>
-              </li>
-            </ul>
+            <select ng-model="orgToTrack" ng-options="org.login as org.login for org in profile.user.orgs">
+            </select>
+            <a href ng-click="track()">Track</a>
           </div>
         </div>
       </div>
