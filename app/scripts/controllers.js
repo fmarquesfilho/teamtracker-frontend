@@ -44,11 +44,28 @@ ttApp.controller('SessionCtrl', function ($scope, $http) {
   .error(function(data) {
     console.log('Error: ' + data);
   });
+  
+  $scope.selectedRepos = function () {
+    var result = [];
+    
+    for (var repo in $scope.trackedRepos) {
+      if ($scope.trackedRepos[repo] === true) {
+        result.push(repo);
+      }
+    }
+    
+    return result;
+  };
 
   $scope.orgToTrack = undefined;
+  $scope.trackedRepos = {};
   
-  $scope.track = function() {
-   
+  $scope.trackRepos = function() {
+    console.log($scope.selectedRepos());
+  }
+  
+  $scope.chooseOrg = function() {
+    $scope.trackedRepos = {};
     for (var i = 0; i < $scope.profile.user.orgs.length; i++) {
       if ($scope.profile.user.orgs[i].login == $scope.orgToTrack) {
         $scope.repos = $scope.profile.user.orgs[i].repos;

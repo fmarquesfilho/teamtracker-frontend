@@ -88,7 +88,7 @@
           <div class="g--half g--last">
             <select ng-model="orgToTrack" ng-options="org.login as org.login for org in profile.user.orgs">
             </select>
-            <a href ng-click="track()">Track</a>
+            <a href ng-click="chooseOrg()">Choose</a>
           </div>
         </div>
       </div>
@@ -102,9 +102,17 @@
           <div class="g--half g--last">
             <ul class="repo-list">
               <li ng-repeat="repo in repos">
-                {{repo.full_name}}
+                <label>
+                  <input
+                    type="checkbox"
+                    name="trackedRepos[]"
+                    value="{{repo.full_name}}"
+                    ng-model="trackedRepos[repo.full_name]"
+                  > {{repo.full_name}}
+                </label>
               </li>
             </ul>
+            <a href ng-click="trackRepos()">Track repositories</a>
           </div>
         </div>
       </div>
