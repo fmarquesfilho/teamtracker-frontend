@@ -57,12 +57,34 @@ ttApp.controller('SessionCtrl', function ($scope, $http) {
     return result;
   };
 
+  $scope.addTeam = function () {
+    $http.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+
+    $http({
+    url: 'http://potato-machine-111353.sae1.nitrousbox.com/protected/teams',
+    method: "POST",
+    data: 'name=' + $scope.orgToTrack + '&gh_organization=' + $scope.orgToTrack,
+    withCredentials: true
+})
+.then(function(response) {
+        window.location = response.data.success_url;
+    }, 
+    function(response) { // optional
+        // failed
+    }
+);
+    /*
+    $http.post('http://potato-machine-111353.sae1.nitrousbox.com/protected/teams', {name: $scope.orgToTrack, gh_organization: $scope.orgToTrack}, { withCredentials: true }).
+      success(function(data, status, headers, config) {
+        console.log(data);
+      }).
+      error(function(data, status, headers, config) {
+        console.log(data);
+      });*/
+  };
+  
   $scope.orgToTrack = undefined;
   $scope.trackedRepos = {};
-  
-  $scope.trackRepos = function() {
-    console.log($scope.selectedRepos());
-  }
   
   $scope.chooseOrg = function() {
     $scope.trackedRepos = {};
